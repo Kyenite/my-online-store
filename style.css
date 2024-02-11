@@ -1,0 +1,147 @@
+:root{
+    --padding-:14px 16px;
+    --min-hnw:100px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: -webkit-linear-gradient(bottom,white,rgb(182, 181, 181));
+}
+
+#about-us section{
+    text-align: center;
+}
+
+#buy,#info{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    font-weight: 100;
+    width: fit-content;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+#buy::before,#info::before{
+    content: "•";
+}
+
+img{
+    max-height: 200px;
+    min-height: var(--min-hnw);
+    height: 30vw;
+    max-width: max-content;
+    min-width: var(--min-hnw);
+    width: auto;
+    border: 5px;
+    border-style: groove;
+}
+
+header{
+    background-color: rgba(100, 97, 97, 0.301);
+    display: flex;
+    overflow: hidden;
+    border-radius: 0px 0px 13px 13px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(3px);
+}
+
+header h1{
+    font-size: 20px;
+    margin-inline-end: auto;
+    margin-left: 5px;
+}
+
+nav{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    float: left;
+}
+
+nav a{
+    text-decoration-line: none;
+    color: rgb(61, 61, 61);
+    font-weight: bold;
+    padding: var(--padding-);
+    margin: 0;
+}
+
+nav a:hover{
+    background-color: rgb(73, 73, 73);
+    color: rgb(153, 155, 156);
+}
+
+figure{
+    text-align: center;
+}
+
+article:not(:last-child){
+    margin: 5px;
+    min-height: 100vh;
+    max-height: max-content;
+    height: auto;
+    display: grid;
+}
+
+#promos{
+    display: block;
+}
+
+#contacts p{
+    text-align: center;
+}
+
+#contacts a{
+    text-decoration-line: none;
+}
+
+@media screen and (max-width:749px) {
+    header{
+        display: block;
+        text-align: center;
+    }
+
+    nav{
+        overflow: hidden;
+        text-align: center;
+        justify-content: center;
+    }
+
+    nav ul{
+        display: inline-block;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li{
+        display: inline-block;
+    }
+
+    nav a{
+        padding: var(--padding-);
+        display: block;
+    }
+
+    #contacts :not(h2,i){
+        display: block;
+        margin: auto;
+    }
+}
